@@ -1,17 +1,16 @@
 $(document).ready(function(){
-  drawSketchpad(96)
+  drawSketchpad(86)
 });
 
 $("#reset_button").on("click", reDrawSketchpad);
 
 function drawSketchpad(row_count) {
-  for(i = 0; i < row_count; i++) {
-    $('.table').append('<div class="row r' + i + '"></div>');
-    for(j = 0; j < row_count; j++) {
-      $('.r' + i).append('<div class="cell c' + j + ' default"></div>');
-    };
+  for(i = 0; i < Math.pow(row_count, 2); i++) {
+    $('.table').append('<div class="cell default"></div>');
   };
-  var row_size = (528 / row_count) + "px";
+  var row_size = Math.floor((650 / row_count)*1000) / 1000 + "px";
+  alert(row_size);
+
   $('.cell').height(row_size).width(row_size);
   $('.cell').hover(function(){
     $(this).removeClass('default').addClass('highlighted')
@@ -24,6 +23,6 @@ function reDrawSketchpad() {
     rows = prompt("Please enter a number between 16 and 128")
   }
 
-  $('.row').remove();
+  $('.cell').remove();
   drawSketchpad(rows)
 }

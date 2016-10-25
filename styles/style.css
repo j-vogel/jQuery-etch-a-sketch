@@ -1,20 +1,14 @@
 .table {
   border: 2px solid black;
   background-color: green;
-  width: 528px;
-  height: 528px;
-  display: table;
-  border-spacing: none;
-}
-
-.row {
-  display: table-row;
-  width: auto;
+  width: 650px;
+  height: 650px;
+  border-spacing: 0;
+  padding: 0;
 }
 
 .cell {
   float: left;
-  display: table-column;
   width: 5.5px;
   height: 5.5px;
   background-color: none;
