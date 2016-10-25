@@ -1,0 +1,29 @@
+.table {
+  border: 2px solid black;
+  background-color: green;
+  width: 528px;
+  height: 528px;
+  display: table;
+  border-spacing: none;
+}
+
+.row {
+  display: table-row;
+  width: auto;
+}
+
+.cell {
+  float: left;
+  display: table-column;
+  width: 5.5px;
+  height: 5.5px;
+  background-color: none;
+}
+
+.default {
+  background-color: #ddd;
+}
+
+.highlighted {
+  background-color: #aaa;
+}
